@@ -21,6 +21,7 @@ import { rubyExtractor } from './ruby';
 import { swiftExtractor } from './swift';
 import { kotlinExtractor } from './kotlin';
 import { dartExtractor } from './dart';
+import { gdscriptExtractor } from './gdscript';
 import { pascalExtractor } from './pascal';
 import { scalaExtractor } from './scala';
 import { luaExtractor } from './lua';
@@ -54,6 +55,7 @@ export const EXTRACTORS: Partial<Record<Language, LanguageExtractor>> = {
   swift: swiftExtractor,
   kotlin: kotlinExtractor,
   dart: dartExtractor,
+  gdscript: gdscriptExtractor,
   pascal: pascalExtractor,
   scala: scalaExtractor,
   lua: luaExtractor,

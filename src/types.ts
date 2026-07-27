@@ -93,6 +93,7 @@ export const LANGUAGES = [
   'swift',
   'kotlin',
   'dart',
+  'gdscript',
   'svelte',
   'vue',
   'astro',
