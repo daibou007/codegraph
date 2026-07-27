@@ -34,7 +34,6 @@ const WASM_GRAMMAR_FILES: Record<GrammarLanguage, string> = {
   swift: 'tree-sitter-swift.wasm',
   kotlin: 'tree-sitter-kotlin.wasm',
   dart: 'tree-sitter-dart.wasm',
-  gdscript: 'tree-sitter-gdscript.wasm',
   pascal: 'tree-sitter-pascal.wasm',
   scala: 'tree-sitter-scala.wasm',
   lua: 'tree-sitter-lua.wasm',
@@ -107,7 +106,6 @@ export const EXTENSION_MAP: Record<string, Language> = {
   '.kt': 'kotlin',
   '.kts': 'kotlin',
   '.dart': 'dart',
-  '.gd': 'gdscript',
   '.liquid': 'liquid',
   '.svelte': 'svelte',
   '.vue': 'vue',
@@ -293,7 +291,6 @@ export async function initGrammars(): Promise<void> {
 const VENDORED_WASM_LANGS: ReadonlySet<GrammarLanguage> = new Set([
   'pascal', 'scala', 'lua', 'luau', 'csharp', 'r', 'cfml', 'cfscript', 'cfquery',
   'cobol', 'vbnet', 'erlang', 'terraform', 'arkts', 'nix',
-  'gdscript',
   'typescript', 'tsx', 'javascript', 'jsx', 'java', 'python', 'go',
   // R7a (C/C++ kernel port prep): tree-sitter-c v0.24.2 (b780e47) +
   // tree-sitter-cpp v0.23.4 (f41e1a0), parser.c/scanner.c sha-matched against
@@ -635,7 +632,6 @@ export function getLanguageDisplayName(language: Language): string {
     swift: 'Swift',
     kotlin: 'Kotlin',
     dart: 'Dart',
-    gdscript: 'GDScript',
     svelte: 'Svelte',
     vue: 'Vue',
     astro: 'Astro',

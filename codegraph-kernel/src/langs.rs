@@ -36,10 +36,9 @@ extern "C" {
 
 /// Languages this kernel binary can extract (reported by contractInfo;
 /// TS-side routing policy decides what actually routes).
-pub const LANGUAGES: [&str; 21] = [
+pub const LANGUAGES: [&str; 20] = [
     "typescript", "tsx", "javascript", "jsx", "java", "python", "go", "c", "cpp", "rust",
     "csharp", "ruby", "php", "swift", "kotlin", "r", "lua", "luau", "scala", "dart",
-    "gdscript",
 ];
 
 pub fn grammar_for(language: &str) -> Option<Language> {
@@ -94,8 +93,6 @@ pub fn grammar_for(language: &str) -> Option<Language> {
         "dart" => {
             Some(unsafe { tree_sitter_language::LanguageFn::from_raw(tree_sitter_dart) }.into())
         }
-        // GDScript: Godot 4.x scripting language (tree-sitter-gdscript 6.1.0, MIT).
-        "gdscript" => Some(tree_sitter_gdscript::LANGUAGE.into()),
         _ => None,
     }
 }

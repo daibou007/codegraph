@@ -61,8 +61,6 @@ tree-sitter-luau = "=1.2.0"
 # tree-sitter-language: the version-agnostic LanguageFn shim for the vendored
 # kotlin grammar C (see build.rs — no kotlin crate dep is possible).
 tree-sitter-language = "0.1"
-# gdscript: Godot 4.x GDScript grammar (MIT). v6.1.0 tracks Godot 4.5 syntax.
-tree-sitter-gdscript = "6.1.0"
 
 [build-dependencies]
 napi-build = "2"

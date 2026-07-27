@@ -23,7 +23,6 @@ mod csharp;
 mod dart;
 mod docstring;
 mod ids;
-mod gdscript;
 mod go;
 mod java;
 mod kotlin;
@@ -232,7 +231,6 @@ pub fn extract_file(file_path: String, content: String, language: String) -> Res
         "lua" | "luau" => lua::extract(&file_path, &content, &language).map_err(Error::from_reason)?,
         "scala" => scala::extract(&file_path, &content).map_err(Error::from_reason)?,
         "dart" => dart::extract(&file_path, &content).map_err(Error::from_reason)?,
-        "gdscript" => gdscript::extract(&file_path, &content).map_err(Error::from_reason)?,
         _ => tsjs::extract(&file_path, &content, &language).map_err(Error::from_reason)?,
     };
     Ok(ExtractBuffers {
